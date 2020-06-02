@@ -29,15 +29,33 @@
                 <v-col cols="12">
                   <v-row justify="center">
                     <v-col cols="6" md="2">
-                      <v-btn color="primary" dark @click.stop="dialog = true">Open Modal</v-btn>
-                      <SimpleModal :dialog="dialog" @update-modal="update" />
+                      <v-btn color="primary" dark @click.stop="simpleModal = true">Open Modal</v-btn>
+                      <SimpleModal :dialog="simpleModal" @update-modal="updateSimpleModal" />
                     </v-col>
                   </v-row>
                 </v-col>
               </v-row>
               <v-divider></v-divider>
 
-              <v-row class="mb-6" no-gutters>
+              <v-row class="mb-6 mt-4" no-gutters>
+                <v-col cols="12">
+                  <h3>Scrollable Modal</h3>
+                </v-col>
+                <v-col cols="12">
+                  <v-row justify="center">
+                    <v-col cols="6" md="2">
+                      <v-btn color="primary" dark @click.stop="scrollableModal = true">Open Modal</v-btn>
+                      <ScrollableModal
+                        :dialog="scrollableModal"
+                        @update-modal="updateScrollableModal"
+                      />
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+              <v-divider></v-divider>
+
+              <v-row class="mb-6 mt-4" no-gutters>
                 <v-col cols="12">cccc</v-col>
               </v-row>
             </v-col>
@@ -50,18 +68,24 @@
 
 <script>
 import SimpleModal from "@/components/SimpleModal";
+import ScrollableModal from "@/components/ScrollableModal";
 export default {
   components: {
-    SimpleModal
+    SimpleModal,
+    ScrollableModal
   },
   data() {
     return {
-      dialog: false
+      simpleModal: false,
+      scrollableModal: false
     };
   },
   methods: {
-    update(state) {
-      this.dialog = state;
+    updateSimpleModal(state) {
+      this.simpleModal = state;
+    },
+    updateScrollableModal(state) {
+      this.scrollableModal = state;
     }
   }
 };
