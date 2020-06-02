@@ -56,7 +56,23 @@
               <v-divider></v-divider>
 
               <v-row class="mb-6 mt-4" no-gutters>
-                <v-col cols="12">cccc</v-col>
+                <v-col cols="12">
+                  <h3>Form Modal</h3>
+                  <p class="mt-2">Just a simple example of a form in a dialog.</p>
+                </v-col>
+                <v-col cols="12">
+                  <v-row justify="center">
+                    <v-col cols="6" md="2">
+                      <v-btn color="primary" dark @click.stop="formModal = true">Open Modal</v-btn>
+                      <FormModal :dialog="formModal" @update-modal="updateFormModal" />
+                    </v-col>
+                  </v-row>
+                </v-col>
+              </v-row>
+              <v-divider></v-divider>
+
+              <v-row class="mb-6 mt-4" no-gutters>
+                <v-col cols="12">More...</v-col>
               </v-row>
             </v-col>
           </v-row>
@@ -69,15 +85,18 @@
 <script>
 import SimpleModal from "@/components/SimpleModal";
 import ScrollableModal from "@/components/ScrollableModal";
+import FormModal from "@/components/FormModal";
 export default {
   components: {
     SimpleModal,
-    ScrollableModal
+    ScrollableModal,
+    FormModal
   },
   data() {
     return {
       simpleModal: false,
-      scrollableModal: false
+      scrollableModal: false,
+      formModal: false
     };
   },
   methods: {
@@ -86,6 +105,9 @@ export default {
     },
     updateScrollableModal(state) {
       this.scrollableModal = state;
+    },
+    updateFormModal(state) {
+      this.formModal = state;
     }
   }
 };
