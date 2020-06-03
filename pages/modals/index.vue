@@ -76,8 +76,22 @@
               </v-row>
               <v-divider></v-divider>
 
+              <!-- Modal with forms & tabs Section -->
               <v-row class="mb-6 mt-4" no-gutters>
-                <v-col cols="12">More...</v-col>
+                <v-col cols="12">
+                  <h3>Multiple Tabs and Forms Modal</h3>
+                  <p
+                    class="mt-2"
+                  >Just a simple example of a modal with multiple tabs and each tab having a form and validation of its own.</p>
+                </v-col>
+                <v-col cols="12">
+                  <v-row justify="center">
+                    <v-col cols="6" md="2">
+                      <v-btn color="primary" dark @click.stop="tabModal = true">Open Modal</v-btn>
+                      <TabModal :dialog="tabModal" @update-modal="updateTabModal" />
+                    </v-col>
+                  </v-row>
+                </v-col>
               </v-row>
             </v-col>
           </v-row>
@@ -91,17 +105,20 @@
 import SimpleModal from "@/components/SimpleModal";
 import ScrollableModal from "@/components/ScrollableModal";
 import FormModal from "@/components/FormModal";
+import TabModal from "@/components/Tabs/TabModal";
 export default {
   components: {
     SimpleModal,
     ScrollableModal,
-    FormModal
+    FormModal,
+    TabModal
   },
   data() {
     return {
       simpleModal: false,
       scrollableModal: false,
-      formModal: false
+      formModal: false,
+      tabModal: false
     };
   },
   methods: {
@@ -113,6 +130,9 @@ export default {
     },
     updateFormModal(state) {
       this.formModal = state;
+    },
+    updateTabModal(state) {
+      this.tabModal = state;
     }
   }
 };
