@@ -5,6 +5,7 @@
       <v-card class="mt-4">
         <v-card-title class="headline">Vuetify Modals</v-card-title>
         <v-card-text>
+          <!-- Top Header Section -->
           <v-row class="mb-6" no-gutters>
             <v-col cols="12">
               The
@@ -22,6 +23,8 @@
           <v-row class="mb-6" no-gutters>
             <v-col cols="12">
               <v-divider></v-divider>
+
+              <!-- Simple Modal Section -->
               <v-row class="mb-6 mt-4" no-gutters>
                 <v-col cols="12">
                   <h3>Simple Modal</h3>
@@ -37,6 +40,7 @@
               </v-row>
               <v-divider></v-divider>
 
+              <!-- Scrollable Modal Section -->
               <v-row class="mb-6 mt-4" no-gutters>
                 <v-col cols="12">
                   <h3>Scrollable Modal</h3>
@@ -55,6 +59,7 @@
               </v-row>
               <v-divider></v-divider>
 
+              <!-- Form Modal Section -->
               <v-row class="mb-6 mt-4" no-gutters>
                 <v-col cols="12">
                   <h3>Form Modal</h3>
