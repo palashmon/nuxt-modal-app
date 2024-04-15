@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.1",
-    "cross-env": "^5.2.0",
+    "cross-env": "^7.0.3",
     "express": "^4.16.4",
     "nuxt": "^2.0.0",
     "vuelidate": "^0.7.5"
