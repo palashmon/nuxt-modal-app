@@ -1,4 +1,4 @@
-# nuxt-modal-app
+# nuxt-modal-app [![CI](https://github.com/palashmon/nuxt-modal-app/actions/workflows/main.yaml/badge.svg)](https://github.com/palashmon/nuxt-modal-app/actions/workflows/main.yaml)
 
 Implementing Modals in a Nuxt.js App using [Vuetify](https://vuetifyjs.com/en/).
 
