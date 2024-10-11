@@ -14,7 +14,7 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.2",
     "cross-env": "^5.2.1",
-    "express": "^4.21.0",
+    "express": "^4.21.1",
     "nuxt": "^3.13.2",
     "vuelidate": "^0.7.7"
   },
