@@ -15,7 +15,7 @@
     "@nuxtjs/dotenv": "^1.4.2",
     "cross-env": "^5.2.1",
     "express": "^4.21.2",
-    "nuxt": "^3.17.4",
+    "nuxt": "^3.17.5",
     "vuelidate": "^0.7.7"
   },
   "devDependencies": {
